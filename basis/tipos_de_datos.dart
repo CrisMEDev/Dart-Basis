@@ -64,3 +64,26 @@ void dataTypesBooleansAndConditions(){
 
 }
 
+void dataTypesList(){
+
+  /**
+   * Una lista en dart no es más que un conjunto de datos del mismo tipo
+   */
+
+  // Definicion de una lista con enteros; por defecto las listas almacenan dynamic(cualquier tipo)
+  List<int> numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+  numeros.add(11);  // Agrega el numero 11 al final de la lista
+
+
+  print(numeros);
+
+  // Imprimir el primer elemento de la lista
+  print(numeros[0]);
+
+  // Se usa el método estático de la clase List para generar 100 numeros
+  final cienNumeros = List.generate(100, (int index) => ++index);
+  print(cienNumeros);
+
+}
+
