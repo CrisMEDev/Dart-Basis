@@ -1,4 +1,5 @@
-import './basis/hola_mundo.dart';
+// import './basis/hola_mundo.dart';
+import './basis/tipos_de_datos.dart';
 
 
 void main(){
@@ -12,7 +13,8 @@ void main(){
    * en DART
    */
 
-  saludar();
+  // saludar();
+  dataTypesStringsAndNumbers();
 
 }
 
