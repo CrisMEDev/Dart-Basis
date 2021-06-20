@@ -87,3 +87,23 @@ void dataTypesList(){
 
 }
 
+void dataTypesMap(){
+
+
+  // Los mapas con lo que en otros lenguajes se conocen como objetos literales(JS), diccionarios(Python)
+
+  // Son tipos de datos que constan de un conjunto de datos con 2 partes; clave y valor. 
+  // En el siguiente ejemplo las llaves tendrán que ser de tipo String y los valores pueden ser cualquier tipo 
+  Map<String, dynamic> persona = {
+    'nombre' : 'Cristian',
+    'edad'   : 26,
+    'soltero': true
+  };
+
+  print(persona);
+
+  // Acceder al valor de un mapa
+  print(persona['nombre']);
+
+}
+

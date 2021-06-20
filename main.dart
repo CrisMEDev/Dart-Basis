@@ -16,7 +16,8 @@ void main(){
   // saludar();
   // dataTypesStringsAndNumbers();
   // dataTypesBooleansAndConditions();
-  dataTypesList();
+  // dataTypesList();
+  dataTypesMap();
 
 }
 
