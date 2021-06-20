@@ -47,3 +47,20 @@ void dataTypesStringsAndNumbers(){
 
 }
 
+void dataTypesBooleansAndConditions(){
+
+  // Antes de la versión 2.12 de dart, las variables podian tener asignados valores null,
+  // con la integración de null safety es responsabilidad del programador indicar a dart cuando aún no se está
+  // seguro de que que valor tendrá una variable (asignar null). Para asignar null en con null safety
+  // y decirle a dart que la variable puede tener valores null, se utiliza el operador ? después de la definición del tipo
+
+  bool? isActive = null;  // Puede tomar valores true, false y null
+
+  if ( isActive == null ){    // Para negar un enunciado se usa !. Negando la expresión en if sería: !isActive
+    print('El booleano es null');
+  } else{
+    print('El booleano no es null');
+  }
+
+}
+
