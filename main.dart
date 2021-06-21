@@ -3,7 +3,8 @@
 // import 'basis/03_funciones.dart';
 // import 'basis/04_clases.dart';
 // import 'basis/05_clases_abstractas.dart';
-import 'basis/06_mixins.dart';
+// import 'basis/06_mixins.dart';
+import 'basis/07_futures.dart';
 
 
 void main(){
@@ -100,13 +101,28 @@ void main(){
 
   // ---------------------------------------------------------------------------------------------------------------------------------
 
-  final myDelfin = new Delfin();
-  final murcielago = new Murcielago();
+  // final myDelfin = new Delfin();
+  // final murcielago = new Murcielago();
 
-  myDelfin.nadar();
+  // myDelfin.nadar();
 
-  murcielago.caminar();
-  murcielago.volar();
+  // murcielago.caminar();
+  // murcielago.volar();
+
+  // ---------------------------------------------------------------------------------------------------------------------------------
+
+
+  print('Antes de la petición');
+
+  // La ejecución del programa continuará mientras se resulve este Future
+  // se usa then para ejecutar una acción despues de que se resuelva el Future
+  // La data es el valor que resolvio el Future; en este caso es un String
+  httpGet('http://api.nasa.com/blackholes')
+    .then((data) {
+      print(data);
+    });
+
+  print('Fin del programa');
 
 
 }
