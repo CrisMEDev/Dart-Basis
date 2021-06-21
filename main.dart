@@ -1,7 +1,7 @@
 // import './basis/01_hola_mundo.dart';
 // import 'basis/02_tipos_de_datos.dart';
 // import 'basis/03_funciones.dart';
-import 'basis/04_clases.dart';
+// import 'basis/04_clases.dart';
 import 'basis/05_clases_abstractas.dart';
 
 
@@ -78,11 +78,25 @@ void main(){
 
   // ---------------------------------------------------------------------------------------------------------------------------------
 
-  final perro = new Perro();
-  final gato = new Gato();
+  // final perro = new Perro();
+  // final gato = new Gato();
 
-  perro.emitirSonido();  // Como perro implementa los métodos y atributos de animal; se pueden llamar como si fueran parte de la clase
-  sonidoAnimal(gato);    // Como gato hereda los métodos y atributos de animal
+  // perro.emitirSonido();  // Como perro implementa los métodos y atributos de animal; se pueden llamar como si fueran parte de la clase
+  // sonidoAnimal(gato);    // Como gato hereda los métodos y atributos de animal
+
+
+  // ---------------------------------------------------------------------------------------------------------------------------------
+
+  final superman = new Heroe('Clark');
+  final joker    = new Villano('Jack Napier');
+
+  print(superman);
+  print(superman.potenciaValentia);
+  print(joker);
+  joker.poder = 'Determinación';
+  print(joker.maldad);
+  print(joker.poder);
+
 
 }
 
