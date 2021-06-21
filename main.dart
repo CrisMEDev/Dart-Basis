@@ -40,32 +40,39 @@ void main(){
 
   // ---------------------------------------------------------------------------------------------------------------------------------
 
-  final rawJsonIronman = {
-    'nombre': 'Tony',
-    'poder' : 'Dinero como batman, además, es un genio'
-  };
+  // final rawJsonIronman = {
+  //   'nombre': 'Tony',
+  //   'poder' : 'Dinero como batman, además, es un genio'
+  // };
 
-  // La siguiente declaración no es válida con null safety debido a que puede
-  // que el nombre o el poder no existan en la data recibida,
-  // final ironman = new Heroe( nombre: rawJSON['nombre'], poder: rawJSON['poder'] );
+  // // La siguiente declaración no es válida con null safety debido a que puede
+  // // que el nombre o el poder no existan en la data recibida,
+  // // final ironman = new Heroe( nombre: rawJSON['nombre'], poder: rawJSON['poder'] );
 
-  // Una solución a la declaración anterior es que si se está seguro de que está escrito correctamente
-  // la propiedad recibida y además estar seguro de que siempre vendrá esa propiedad
-  // se utiliza el signo ! (para indicar que como programador se está seguro de lo que se recibe)
-  final ironman = new Heroe( nombre: rawJsonIronman['nombre']!, poder: rawJsonIronman['poder']! );
-  print(ironman);
+  // // Una solución a la declaración anterior es que si se está seguro de que está escrito correctamente
+  // // la propiedad recibida y además estar seguro de que siempre vendrá esa propiedad
+  // // se utiliza el signo ! (para indicar que como programador se está seguro de lo que se recibe)
+  // final ironman = new Heroe( nombre: rawJsonIronman['nombre']!, poder: rawJsonIronman['poder']! );
+  // print(ironman);
 
 
-  final rawJsonBatman = {
-    'nombre': 'Batman',
-    'poder' : 'Dinero'
-  };
-  final batman = new Heroe.fromJSON( rawJsonBatman );
-  print(batman);
+  // final rawJsonBatman = {
+  //   'nombre': 'Batman',
+  //   'poder' : 'Dinero'
+  // };
+  // final batman = new Heroe.fromJSON( rawJsonBatman );
+  // print(batman);
 
   // ---------------------------------------------------------------------------------------------------------------------------------
 
-  
+  final cuadrado = new Cuadrado( 5.0 );
+
+  // print('El lado es: ${cuadrado.lado}');  // No se puede acceder a la propiedad lado porque es privada, usar getter y setter en cambio
+  print('El area con método es: ${cuadrado.calcularArea()}');
+  print('El area con getter es: ${cuadrado.lado}');
+
+  cuadrado.lado = 6;
+  print('El area después de un setter es: ${cuadrado.calcularArea()}');
 
 
 }

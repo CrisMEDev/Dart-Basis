@@ -1,3 +1,5 @@
+import 'dart:math' as math;
+
 
 class Heroe {
 
@@ -31,6 +33,28 @@ class Heroe {
   @override
   String toString() {
     return 'nombre: ${this.nombre}, poder: ${this.poder}';  // this es para hacer referencia a elementos dentro de la misma clase
+  }
+
+}
+
+
+class Cuadrado {
+
+  double _lado;
+  
+  // Obtiene el area, se llama como una propiedad
+  double get lado => this._lado;
+
+  // Establece el valor de una propiedad
+  set lado(double lado) => this._lado = lado;
+
+  Cuadrado( double lado ):
+    this._lado = lado;
+  
+  // Usando la libreria math y apodandola 'math' se usa el método pow(x, y) para obtener el area
+  double calcularArea(){
+    // Se usa una conversión a double ya que por defecto pow(x, y) devuelve un tipo num
+    return math.pow(this._lado, 2).toDouble();
   }
 
 }
