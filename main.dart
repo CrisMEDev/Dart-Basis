@@ -2,7 +2,8 @@
 // import 'basis/02_tipos_de_datos.dart';
 // import 'basis/03_funciones.dart';
 // import 'basis/04_clases.dart';
-import 'basis/05_clases_abstractas.dart';
+// import 'basis/05_clases_abstractas.dart';
+import 'basis/06_mixins.dart';
 
 
 void main(){
@@ -87,15 +88,25 @@ void main(){
 
   // ---------------------------------------------------------------------------------------------------------------------------------
 
-  final superman = new Heroe('Clark');
-  final joker    = new Villano('Jack Napier');
+  // final superman = new Heroe('Clark');
+  // final joker    = new Villano('Jack Napier');
 
-  print(superman);
-  print(superman.potenciaValentia);
-  print(joker);
-  joker.poder = 'Determinación';
-  print(joker.maldad);
-  print(joker.poder);
+  // print(superman);
+  // print(superman.potenciaValentia);
+  // print(joker);
+  // joker.poder = 'Determinación';
+  // print(joker.maldad);
+  // print(joker.poder);
+
+  // ---------------------------------------------------------------------------------------------------------------------------------
+
+  final myDelfin = new Delfin();
+  final murcielago = new Murcielago();
+
+  myDelfin.nadar();
+
+  murcielago.caminar();
+  murcielago.volar();
 
 
 }
