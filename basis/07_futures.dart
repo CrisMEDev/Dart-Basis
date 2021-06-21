@@ -10,3 +10,9 @@ Future<String> httpGet( String url ){
 
 }
 
+
+// La palabra reservada async se usa para indicarle a un método que retornará un Future
+Future<String> getUserName( String uid ) async {
+  return '$uid - Cristian';
+}
+

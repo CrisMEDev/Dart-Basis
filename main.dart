@@ -7,7 +7,7 @@
 import 'basis/07_futures.dart';
 
 
-void main(){
+void main() async{
 
   // Comentario de una linea en DART
   
@@ -117,10 +117,18 @@ void main(){
   // La ejecución del programa continuará mientras se resulve este Future
   // se usa then para ejecutar una acción despues de que se resuelva el Future
   // La data es el valor que resolvio el Future; en este caso es un String
-  httpGet('http://api.nasa.com/blackholes')
-    .then((data) {
-      print(data);
-    });
+  
+  // httpGet('http://api.nasa.com/blackholes')
+  //   .then((data) {
+  //     print(data);
+  //   });
+
+  getUserName('123456').then(print);  // La instruccion dentro del print es lo equivalente a '(data) => print(data)'
+
+  // El await espera a que se resuelva el Future y después continua ejecutando el código
+  // Para usar el await la la función o el método que lo usa debe ser async 
+  final nombre = await getUserName('654321');
+  print(nombre);
 
   print('Fin del programa');
 
