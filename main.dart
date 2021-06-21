@@ -2,6 +2,7 @@
 // import 'basis/02_tipos_de_datos.dart';
 // import 'basis/03_funciones.dart';
 import 'basis/04_clases.dart';
+import 'basis/05_clases_abstractas.dart';
 
 
 void main(){
@@ -65,15 +66,23 @@ void main(){
 
   // ---------------------------------------------------------------------------------------------------------------------------------
 
-  final cuadrado = new Cuadrado( 5.0 );
+  // final cuadrado = new Cuadrado( 5.0 );
 
-  // print('El lado es: ${cuadrado.lado}');  // No se puede acceder a la propiedad lado porque es privada, usar getter y setter en cambio
-  print('El area con método es: ${cuadrado.calcularArea()}');
-  print('El area con getter es: ${cuadrado.lado}');
+  // // print('El lado es: ${cuadrado.lado}');  // No se puede acceder a la propiedad lado porque es privada, usar getter y setter en cambio
+  // print('El area con método es: ${cuadrado.calcularArea()}');
+  // print('El area con getter es: ${cuadrado.lado}');
 
-  cuadrado.lado = 6;
-  print('El area después de un setter es: ${cuadrado.calcularArea()}');
+  // cuadrado.lado = 6;
+  // print('El area después de un setter es: ${cuadrado.calcularArea()}');
 
+
+  // ---------------------------------------------------------------------------------------------------------------------------------
+
+  final perro = new Perro();
+  final gato = new Gato();
+
+  perro.emitirSonido();  // Como perro implementa los métodos y atributos de animal; se pueden llamar como si fueran parte de la clase
+  sonidoAnimal(gato);    // Como gato hereda los métodos y atributos de animal
 
 }
 
